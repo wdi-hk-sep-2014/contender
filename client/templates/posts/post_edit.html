@@ -6,6 +6,7 @@
       <label class="control-label" for="title">Title</label>
       <div class="controls">
         <input name="title" id="title" type="text" value="" placeholder="Name your post." class="form-control"/>
+        <span class="help-block">{{errorMessage 'title'}}</span>
       </div>
     </div>
 
@@ -14,6 +15,7 @@
       <label class="control-label" for="activity">Activity</label>
       <div class="controls">
         <input name="activity" id="activity" type="text" value="" placeholder="What are we doing?" class="form-control"/>
+        <span class="help-block">{{errorMessage 'activity'}}</span>
       </div>
     </div>
 
@@ -22,6 +24,7 @@
       <label class="control-label" for="description">Description</label>
       <div class="controls">
         <input name="description" id="description" type="text" value="" placeholder="Taunt your challenger. Designate a battleground." class="form-control"/>
+        <span class="help-block">{{errorMessage 'description'}}</span>
       </div>
     </div>
 
