@@ -2,6 +2,10 @@ Meteor.publish('posts', function() {
   return Posts.find();
 });
 
+
+// passing this.params._id as an argument to the subscription
+// restricting our data set to comments belonging to the current post
 Meteor.publish('comments', function() {
-  return Comments.find();
+  check(postId, String);
+  return Comments.find({postId: postId});
 });
