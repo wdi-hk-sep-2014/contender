@@ -1,9 +1,18 @@
 <template name="postPage">
   {{> postItem}}
+
   <div class="post">
     <div class="post-content">
-      <p>{{activity}}</p>
-      <p>{{description}}</p>
+      <p><strong>{{activity}}</strong></p>
+      <p><strong>{{description}}</strong></p>
     </div>
   </div>
+
+
+  <ul class="comments">
+    {{#each comments}}
+      {{> commentItem}}
+    {{/each}}
+  </ul>
+
 </template>
