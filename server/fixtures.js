@@ -20,7 +20,8 @@ if (Posts.find().count() === 0) {
     activity: "Chess",
     author: song.profile.name,
     description: "Lan Kwai Fong, this weekend, around 7pm. You up for this?",
-    submitted: new Date(now - 7 * 3600 * 1000)
+    submitted: new Date(now - 7 * 3600 * 1000),
+    commentsCount: 2
   });
 
   Comments.insert({
@@ -44,7 +45,8 @@ if (Posts.find().count() === 0) {
     activity: "Tic-Tac-Toe",
     author: harry.profile.name,
     description: "Cyberport, 3F, tomorrow. Bring pen and paper, sucka!",
-    submitted: new Date(now - 10 * 3600 * 1000)
+    submitted: new Date(now - 10 * 3600 * 1000),
+    commentsCount: 0
   });
 
   Posts.insert({
@@ -52,7 +54,8 @@ if (Posts.find().count() === 0) {
     activity: "Tennis",
     author: song.profile.name,
     description: "There's a tennis court behind my apartment at Central. 7pm, loser buys dinner!",
-    submitted: new Date(now - 12 * 3600 * 1000)
+    submitted: new Date(now - 12 * 3600 * 1000),
+    commentsCount: 0
   });
 
 }
