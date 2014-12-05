@@ -1,4 +1,4 @@
-<template name="postSubmit">
+<template name="postEdit">
   <form class="main form">
 
 
@@ -21,7 +21,7 @@
 
 
     <div class="form-group">
-      <label class="control-label" for="description">Description, Location</label>
+      <label class="control-label" for="description">Description</label>
       <div class="controls">
         <input name="description" id="description" type="text" value="" placeholder="Taunt your challenger. Designate a battleground." class="form-control"/>
         <span class="help-block">{{errorMessage 'description'}}</span>
@@ -29,9 +29,8 @@
     </div>
 
 
-
     <input type="submit" value="Submit" class="btn btn-primary"/>
-
-
+    <hr/>
+    <a class="btn btn-danger delete" href="#">Delete post</a>
   </form>
 </template>
