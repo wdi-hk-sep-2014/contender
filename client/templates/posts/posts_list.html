@@ -1,7 +1,24 @@
 <template name="postsList">
   <div class="posts">
+
+  {{#ifEsInputIsEmpty index="posts"}}
     {{#each posts}}
       {{> postItem}}
     {{/each}}
+  {{/ifEsInputIsEmpty}}
+
+
+
+  {{#ifEsHasNoResults index="posts"}}
+    <div class="no-results">No results found!</div>
+
+  {{else}}
+
+    {{#esEach index="posts"}}
+      {{> postItem}}
+    {{/esEach}}
+    {{> esLoadMoreButton index="posts" id="search" }}
+
+  {{/ifEsHasNoResults}}
   </div>
 </template>
