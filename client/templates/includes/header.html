@@ -12,18 +12,25 @@
 
 
 
+
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
           {{#if currentUser}}<li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
           {{/if}}
+          <li class="dropdown">
+            {{> notifications}}
+          </li>
         </ul>
+
+        <form class="nav navbar-nav navbar-form">
+          {{> searchBox}}
+        </form>
+
 
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}
         </ul>
       </div>
-
-
     </div>
   </nav>
 </template>
