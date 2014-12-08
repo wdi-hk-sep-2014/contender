@@ -16,7 +16,6 @@ Template.notificationItem.helpers({
 // notifications that are clicked are marked as read
 Template.notificationItem.events({
   'click a': function() {
-    Notifications.update(this._id {$set: {read: true}});
+    Notifications.update(this._id, {$set: {read: true}});
   }
 });
-
