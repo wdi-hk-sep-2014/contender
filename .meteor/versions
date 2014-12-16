@@ -51,6 +51,7 @@ mizzao:bootstrap-3@3.3.1
 mobile-status-bar@1.0.1
 mongo-livedata@1.0.6
 mongo@1.0.8
+mrt:moment@2.8.1
 npm-bcrypt@0.7.7
 observe-sequence@1.0.3
 ordered-dict@1.0.1
@@ -71,6 +72,7 @@ standard-app-packages@1.0.3
 stylus@1.0.5
 templating@1.0.9
 tracker@1.0.3
+tsega:bootstrap3-datetimepicker@3.1.3_1
 ui@1.0.4
 underscore@1.0.1
 url@1.0.2
