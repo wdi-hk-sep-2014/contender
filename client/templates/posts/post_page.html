@@ -9,8 +9,14 @@
 
       <table class="table">
         <tr>
+          {{#if currentUser}}
           <th><input type="submit" value="{{joinedSpec}}" class="{{joinedSpec2}}"/></th>
           <th><input type="submit" value="{{joinedChall}}" class="{{joinedChall2}}"/></th>
+          {{else}}
+          <br>
+          Please log in to join this event as a Spectator or a Challenger.
+          {{/if}}
+
         </tr>
         <tr>
           <td>{{specJoins}} Spectators</td>
