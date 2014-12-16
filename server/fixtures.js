@@ -21,7 +21,11 @@ if (Posts.find().count() === 0) {
     author: song.profile.name,
     description: "Lan Kwai Fong, this weekend, around 7pm. You up for this?",
     submitted: new Date(now - 7 * 3600 * 1000),
-    commentsCount: 2
+    commentsCount: 2,
+    spectators: [],
+    specJoins: 0,
+    challengers: [],
+    challJoins: 0
   });
 
   Comments.insert({
@@ -46,7 +50,11 @@ if (Posts.find().count() === 0) {
     author: harry.profile.name,
     description: "Cyberport, 3F, tomorrow. Bring pen and paper, sucka!",
     submitted: new Date(now - 10 * 3600 * 1000),
-    commentsCount: 0
+    commentsCount: 0,
+    spectators: [],
+    specJoins: 0,
+    challengers: [],
+    challJoins: 0
   });
 
   Posts.insert({
@@ -55,7 +63,11 @@ if (Posts.find().count() === 0) {
     author: song.profile.name,
     description: "There's a tennis court behind my apartment at Central. 7pm, loser buys dinner!",
     submitted: new Date(now - 12 * 3600 * 1000),
-    commentsCount: 0
+    commentsCount: 0,
+    spectators: [],
+    specJoins: 0,
+    challengers: [],
+    challJoins: 0
   });
 
 }
