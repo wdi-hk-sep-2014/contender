@@ -1,4 +1,4 @@
 Template.datetimepicker.rendered = function() {
-    $('.datetimepicker1').datetimepicker();
+  $('#datetimepicker1').datetimepicker();
 }
 
