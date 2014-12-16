@@ -37,7 +37,12 @@ Template.postPage.helpers({
     } else {
       return 'btn btn-success';
     }
+  },
+
+  ownPost: function() {
+    return this.userId === Meteor.userId();
   }
+
 });
 
 Template.postPage.events({

@@ -7,22 +7,21 @@
       <p><strong>{{description}}</strong></p>
 
 
-      <table class="table">
-        <tr>
-          {{#if currentUser}}
-          <th><input type="submit" value="{{joinedSpec}}" class="{{joinedSpec2}}"/></th>
-          <th><input type="submit" value="{{joinedChall}}" class="{{joinedChall2}}"/></th>
-          {{else}}
-          <br>
-          Please log in to join this event as a Spectator or a Challenger.
-          {{/if}}
+      <p>{{specJoins}} Spectators</p>
+      <p>{{challJoins}} Challengers</p>
 
-        </tr>
-        <tr>
-          <td>{{specJoins}} Spectators</td>
-          <td>{{challJoins}} Challengers</td>
-        </tr>
-      </table>
+
+      {{#if currentUser}}
+        {{#if ownPost}}
+          <p>You are the Contender of this event.</p>
+        {{else}}
+          <input type="submit" value="{{joinedSpec}}" class="{{joinedSpec2}}"/>
+          <input type="submit" value="{{joinedChall}}" class="{{joinedChall2}}"/>
+        {{/if}}
+      {{else}}
+        <p>Please login to join as Spectator or Challenger.</p>
+      {{/if}}
+
 
     </div>
   </div>
