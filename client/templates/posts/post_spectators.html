@@ -1,0 +1,21 @@
+<template name="postSpectators">
+  {{> postItem}}
+
+  <div class="post">
+    <div class="post-content">
+
+    <label>List of Spectators</label>
+
+    {{#each spectators}}
+      {{> spectator}}
+    {{/each}}
+
+    </div>
+  </div>
+
+</template>
+
+
+<template name="spectator">
+  <p>{{userName}}</p>
+</template>
