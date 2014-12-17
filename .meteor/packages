@@ -8,9 +8,11 @@ mizzao:bootstrap-3
 underscore
 iron:router
 sacha:spin
-ian:accounts-ui-bootstrap-3
 accounts-password
-html5cat:bootstrap-material-design
 audit-argument-checks
 matteodem:easy-search
+ian:accounts-ui-bootstrap-3
+html5cat:bootstrap-material-design
+tsega:bootstrap3-datetimepicker
+mizzao:jquery-ui
 

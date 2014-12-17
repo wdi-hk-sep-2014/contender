@@ -5,6 +5,23 @@
     <div class="post-content">
       <p><strong>{{activity}}</strong></p>
       <p><strong>{{description}}</strong></p>
+
+      <p><a href="{{pathFor route='postSpectators'}}"> List of Spectators</a></p>
+      <p><a href="{{pathFor route='postChallengers'}}"> List of Challengers</a></p>
+
+
+      {{#if currentUser}}
+        {{#if ownPost}}
+          <p>You are the Contender of this event.</p>
+        {{else}}
+          <input type="submit" value="{{joinedSpec}}" class="{{joinedSpecClass}}"/>
+          <input type="submit" value="{{joinedChall}}" class="{{joinedChallClass}}"/>
+        {{/if}}
+      {{else}}
+        <p>Please login to join as Spectator or Challenger.</p>
+      {{/if}}
+
+
     </div>
   </div>
 

@@ -2,11 +2,11 @@
   <div class="post">
     <div class="post-content">
       <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
-      <p>
+      <p>{{specJoins}} Spectators, {{challJoins}} Challengers,
       submitted by {{author}},
 
         <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}</p>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" style="color: red">Edit</a>{{/if}}</p>
     </div>
     <a href="{{pathFor 'postPage'}}" class="bite btn btn-default">Bite</a>
   </div>

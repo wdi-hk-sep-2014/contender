@@ -1,0 +1,21 @@
+<template name="postChallengers">
+  {{> postItem}}
+
+  <div class="post">
+    <div class="post-content">
+
+    <label>List of Challengers</label>
+
+    {{#each challengers}}
+      {{> challenger}}
+    {{/each}}
+
+    </div>
+  </div>
+
+</template>
+
+
+<template name="challenger">
+  <p>{{userName}} <input value="Select Challenger" class="btn btn-danger"/></p>
+</template>
