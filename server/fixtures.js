@@ -4,7 +4,8 @@ if (Posts.find().count() === 0) {
 
   // dummy users
   var songId = Meteor.users.insert({
-    username: "songyeepark"
+    username: "songyeepark",
+    password: "whatever"
   });
 
   var song = Meteor.users.findOne(songId);
@@ -43,7 +44,7 @@ if (Posts.find().count() === 0) {
     author: song.username,
     submitted: new Date(now - 3 * 3600 * 1000),
     body: "My magikarp is going to whoop your ass."
-  })
+  });
 
   Posts.insert({
     title: "Currently undefeated in the greatest sport that is Ping Pong",
@@ -73,5 +74,6 @@ if (Posts.find().count() === 0) {
     challJoins: 0,
     selected: false
   });
+
 
 }
