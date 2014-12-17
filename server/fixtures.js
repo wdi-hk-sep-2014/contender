@@ -4,7 +4,8 @@ if (Posts.find().count() === 0) {
 
   // dummy users
   var songId = Meteor.users.insert({
-    username: "songyeepark"
+    username: "songyeepark",
+    password: "whatever"
   });
 
   var song = Meteor.users.findOne(songId);
@@ -16,16 +17,17 @@ if (Posts.find().count() === 0) {
 
 
   var chessId = Posts.insert({
-    title: "I'll beat you so hard",
-    activity: "Chess",
+    title: "You think your Pokemon is better than mine?",
+    activity: "Video Game",
     author: song.username,
-    description: "Lan Kwai Fong, this weekend, around 7pm. You up for this?",
+    description: "Lan Kwai Fong, this weekend, around 7pm.",
     submitted: new Date(now - 7 * 3600 * 1000),
     commentsCount: 2,
     spectators: [],
     specJoins: 0,
     challengers: [],
-    challJoins: 0
+    challJoins: 0,
+    selected: false
   });
 
   Comments.insert({
@@ -41,33 +43,37 @@ if (Posts.find().count() === 0) {
     userId: song._id,
     author: song.username,
     submitted: new Date(now - 3 * 3600 * 1000),
-    body: "No using magic! Fair play!"
-  })
+    body: "My magikarp is going to whoop your ass."
+  });
 
   Posts.insert({
-    title: "Currently undefeated in the game of Tic-Tac-Toe",
-    activity: "Tic-Tac-Toe",
+    title: "Currently undefeated in the greatest sport that is Ping Pong",
+    activity: "Ping Pong",
     author: harry.username,
-    description: "Cyberport, 3F, tomorrow. Bring pen and paper, sucka!",
+    description: "Cyberport, 3F, tomorrow. Bring your own racket.",
     submitted: new Date(now - 10 * 3600 * 1000),
     commentsCount: 0,
     spectators: [],
     specJoins: 0,
     challengers: [],
-    challJoins: 0
+    challJoins: 0,
+    selected: false
+
   });
 
   Posts.insert({
-    title: "Seeking a Tennis rival",
-    activity: "Tennis",
+    title: "Seeking a sparring partner...in Street Fighter",
+    activity: "Arcade",
     author: song.username,
-    description: "There's a tennis court behind my apartment at Central. 7pm, loser buys dinner!",
+    description: "GameZone, New Town Mall, 65 Argyle St, Mong Kok. 7pm, loser buys dinner!",
     submitted: new Date(now - 12 * 3600 * 1000),
     commentsCount: 0,
     spectators: [],
     specJoins: 0,
     challengers: [],
-    challJoins: 0
+    challJoins: 0,
+    selected: false
   });
+
 
 }

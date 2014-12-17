@@ -1,18 +1,18 @@
 <template name="postPage">
   {{> postItem}}
 
+  {{> postContenders}}
+
   <div class="post">
     <div class="post-content">
       <p><strong>{{activity}}</strong></p>
       <p><strong>{{description}}</strong></p>
-
-      <p><a href="{{pathFor route='postSpectators'}}"> List of Spectators</a></p>
-      <p><a href="{{pathFor route='postChallengers'}}"> List of Challengers</a></p>
+      <p><strong>{{dateAndTime}}</strong></p>
 
 
       {{#if currentUser}}
         {{#if ownPost}}
-          <p>You are the Contender of this event.</p>
+
         {{else}}
           <input type="submit" value="{{joinedSpec}}" class="{{joinedSpecClass}}"/>
           <input type="submit" value="{{joinedChall}}" class="{{joinedChallClass}}"/>
