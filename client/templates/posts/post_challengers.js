@@ -14,3 +14,15 @@ Template.challenger.helpers({
     return user.username;
   }
 });
+
+Template.challenger.events({
+  'click .selectChallenger': function(e) {
+    e.preventDefault();
+
+    if (confirm("Select this Challenger?")) {
+
+      Router.go('postPage');
+    }
+  }
+
+});
