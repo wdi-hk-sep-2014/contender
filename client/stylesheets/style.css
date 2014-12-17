@@ -1,3 +1,8 @@
+
+.post .post-content #matchup {
+  height: 500px;
+}
+
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;
   -webkit-border-radius: 3px;
@@ -164,8 +169,9 @@ body {
   pointer-events: auto;
 }
 
-
-
+p#matchup {
+  font-size: 40px;
+}
 
 
 

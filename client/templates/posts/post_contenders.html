@@ -1,14 +1,22 @@
 <template name="postContenders">
   <div class="post">
-    <div class="post-content">
+    <div class="post-content" id="matchup">
 
-    <p>{{author}} VS {{displayText}}</p>
+      <table>
+        <tr>
+          <th width="200">Contender</th>
+          <th>Challenger</th>
+        </tr>
+        <tr>
+          <td>{{author}}</td>
+          <td>{{displayText}}</td>
+        </tr>
+      </table>
 
-
-      {{#if ownPost}}
-        <button class="btn btn-danger notifyChange">Notify Change</button>
-        <a href="{{pathFor route='contendersList'}}" class="btn btn-primary">Select Challenger</a>
-      {{/if}}
+        {{#if ownPost}}
+          <button class="btn btn-danger notifyChange">Notify Change</button>
+          <a href="{{pathFor route='contendersList'}}" class="btn btn-primary">Select Challenger</a>
+        {{/if}}
 
 
 

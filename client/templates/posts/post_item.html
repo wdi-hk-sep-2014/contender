@@ -3,14 +3,19 @@
     <div class="post-content">
       <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
 
-      <p><a href="{{pathFor route='postSpectators'}}"> {{specJoins}} Spectators,</a>
-      <a href="{{pathFor route='postChallengers'}}"> {{challJoins}} Challengers,</a>
+      <p>
+        <a href="{{pathFor route='postSpectators'}}"> {{specJoins}} Spectators,</a>
+        <a href="{{pathFor route='postChallengers'}}"> {{challJoins}} Challengers,</a>
+        <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments,</a>
+        submitted by {{author}}
+          {{#if ownPost}}
+          <a href="{{pathFor 'postEdit'}}" style="color: red">Edit</a>
+          {{/if}}
+      </p>
 
 
-      <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments,</a>
-      submitted by {{author}}
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" style="color: red">Edit</a>{{/if}}</p>
     </div>
       <a href="{{pathFor 'postPage'}}"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Battle_icon_gladii.svg/120px-Battle_icon_gladii.svg.png" class="bite" width="30" height="30" border="0"></a>
+      <button class="btn btn-success bite">Close Event</button>
   </div>
 </template>
