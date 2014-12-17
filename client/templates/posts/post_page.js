@@ -12,7 +12,7 @@ Template.postPage.helpers({
     }
   },
 
-  joinedSpec2: function() {
+  joinedSpecClass: function() {
     var userId = Meteor.userId();
     if (userId && !_.include(this.spectators, userId)) {
       return 'upSpec btn btn-primary';
@@ -30,7 +30,7 @@ Template.postPage.helpers({
     }
   },
 
-  joinedChall2: function(){
+  joinedChallClass: function(){
     var userId = Meteor.userId();
     if (userId && !_.include(this.challengers, userId)) {
       return 'upChall btn btn-danger';
