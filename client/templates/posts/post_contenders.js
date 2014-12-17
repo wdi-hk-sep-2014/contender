@@ -13,6 +13,17 @@ Template.postContenders.helpers({
       return user.username;
     }
   }
+
+});
+
+
+Template.postContenders.events({
+
+  'click .notifyChange': function(e) {
+    e.preventDefault;
+    console.log("postId: " + post._id)
+    Meteor.call('createGroupNotification', post._id)
+  }
 });
 
 

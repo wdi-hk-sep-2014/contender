@@ -2,14 +2,14 @@
   <div class="post">
     <div class="post-content">
 
+    <p>{{author}} VS {{displayText}}</p>
+
 
       {{#if ownPost}}
-        <a href="#" class="btn btn-primary notifyChange">Notify Change</a>
-        {{author}} VS
-        <a href="{{pathFor route='contendersList'}}">{{displayText}}</a>
-      {{else}}
-        {{author}} VS <strong>Waiting for Challengers</strong>
+        <button class="btn btn-danger notifyChange">Notify Change</button>
+        <a href="{{pathFor route='contendersList'}}" class="btn btn-primary">Select Challenger</a>
       {{/if}}
+
 
 
     </div>

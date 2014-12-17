@@ -18,9 +18,19 @@
 </template>
 
 <template name="notificationItem">
+
   <li>
-    <a href="{{notificationPostPath}}">
-      <strong>{{commenterName}}</strong> commented on your post
-    </a>
+
+    {{#if isGroup}}
+      <a href="{{groupNotification}}">
+        <strong>{{author}}</strong> has selected a challenger
+      </a>
+    {{else}}
+      <a href="{{notificationPostPath}}">
+        <strong>{{commenterName}}</strong> commented on your post
+      </a>
+    {{/if}}
+
+
   </li>
 </template>
