@@ -1,26 +1,31 @@
-<template name="postContenders">
-  <div class="post">
-    <div class="post-content" id="matchup">
+<template name="postContenders" class="container">
+  <div class="post row">
 
-      <table>
-        <tr>
-          <th width="200">Contender</th>
-          <th>Challenger</th>
-        </tr>
-        <tr>
-          <td>{{author}}</td>
-          <td>{{displayText}}</td>
-        </tr>
-      </table>
-
-        {{#if ownPost}}
-          <button class="btn btn-danger notifyChange">Notify Change</button>
-          <a href="{{pathFor route='contendersList'}}" class="btn btn-primary">Select Challenger</a>
-        {{/if}}
-
-
-
+    <div class="post-content col-md-3">
+      <p><strong>The Contender</strong></p>
+      <p style="font-size: 30px">{{author}}
+      <span><img src="http://png-5.findicons.com/files/icons/2711/free_icons_for_windows8_metro/512/crown.png" height="25px" /></span></p>
     </div>
+
+    <div class="post-content col-md-3">
+      <p><strong>The Challenger</strong></p>
+      <p style="font-size: 30px">{{displayText}}</p>
+    </div>
+
+    <div class="post-content col-md-3">
+      {{#if ownPost}}
+      <a href="{{pathFor route='contendersList'}}" class="btn btn-primary">Select Challenger</a>
+      <p>Pick your foe from a list of Challengers.</p>
+      {{/if}}
+    </div>
+
+    <div class="post-content col-md-3">
+      {{#if ownPost}}
+      <button class="btn btn-danger notifyChange">Notify Changes</button>
+      <p>Rally your Spectators and others after selecting your Challenger.</p>
+      {{/if}}
+    </div>
+
   </div>
 </template>
 

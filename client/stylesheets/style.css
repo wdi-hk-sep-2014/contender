@@ -1,6 +1,6 @@
+span#authorMark {
+  font-weight: 800;
 
-.post .post-content #matchup {
-  height: 500px;
 }
 
 .grid-block, .main, .post, .comments li, .comment-form {
@@ -17,9 +17,10 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
 body {
-  background: #eee;
-  color: #666666; }
+  background-color: #3b3b3b;
+  background-image: url(http://www.transparenttextures.com/patterns/gplay.png); }
 
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 .navbar {
   margin-bottom: 10px; }
 /* line 32, ../sass/style.scss */
@@ -84,6 +85,13 @@ body {
   display: block;
   float: right;
   margin-top: 7px; }
+
+h3#postTitle {
+  font-weight: 800;
+}
+
+
+
 
 .comments {
   list-style-type: none;
