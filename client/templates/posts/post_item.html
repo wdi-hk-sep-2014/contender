@@ -15,6 +15,10 @@
 
 
     </div>
-      <a href="{{pathFor 'postPage'}}" class="btn btn-success bite">Open</a>
+      {{#if openPost}}
+        <a href="{{pathFor 'postPage'}}" class="btn btn-success bite">Open</a>
+        {{else}}
+        <a href="{{pathFor 'postPage'}}" class="btn btn-danger bite">Closed</a>
+      {{/if}}
   </div>
 </template>

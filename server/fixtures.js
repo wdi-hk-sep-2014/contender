@@ -4,8 +4,7 @@ if (Posts.find().count() === 0) {
 
   // dummy users
   var songId = Meteor.users.insert({
-    username: "songyeepark",
-    password: "whatever"
+    username: "songyeepark"
   });
 
   var song = Meteor.users.findOne(songId);
@@ -13,21 +12,23 @@ if (Posts.find().count() === 0) {
   var harryId = Meteor.users.insert({
     username: "harrypotter"
   });
+
   var harry = Meteor.users.findOne(harryId);
 
 
   var chessId = Posts.insert({
-    title: "You think your Pokemon is better than mine?",
-    activity: "Video Game",
+    title: "(test) Chess, best three out of five",
+    activity: "Chess",
     author: song.username,
-    description: "Lan Kwai Fong, this weekend, around 7pm.",
+    description: "Hong Kong Park, 19 Cotton Tree Drive. I'll bring the board.",
     submitted: new Date(now - 7 * 3600 * 1000),
     commentsCount: 2,
     spectators: [],
     specJoins: 0,
     challengers: [],
     challJoins: 0,
-    selected: false
+    selected: false,
+    open: true
   });
 
   Comments.insert({
@@ -35,7 +36,7 @@ if (Posts.find().count() === 0) {
     userId: harry._id,
     author: harry.username,
     submitted: new Date(now - 5 * 3600 * 1000),
-    body: 'Bring it onnnnnn.'
+    body: "Do you play professionally? I haven't played in a while."
   });
 
   Comments.insert({
@@ -43,11 +44,11 @@ if (Posts.find().count() === 0) {
     userId: song._id,
     author: song.username,
     submitted: new Date(now - 3 * 3600 * 1000),
-    body: "My magikarp is going to whoop your ass."
+    body: "No worries, I'm open to players of all levels."
   });
 
   Posts.insert({
-    title: "Currently undefeated in the greatest sport that is Ping Pong",
+    title: "(test) Currently undefeated in the greatest sport that is Ping Pong",
     activity: "Ping Pong",
     author: harry.username,
     description: "Cyberport, 3F, tomorrow. Bring your own racket.",
@@ -57,12 +58,13 @@ if (Posts.find().count() === 0) {
     specJoins: 0,
     challengers: [],
     challJoins: 0,
-    selected: false
+    selected: false,
+    open: true
 
   });
 
   Posts.insert({
-    title: "Seeking a sparring partner...in Street Fighter",
+    title: "(test) Seeking a sparring partner...in Street Fighters",
     activity: "Arcade",
     author: song.username,
     description: "GameZone, New Town Mall, 65 Argyle St, Mong Kok. 7pm, loser buys dinner!",
@@ -72,7 +74,8 @@ if (Posts.find().count() === 0) {
     specJoins: 0,
     challengers: [],
     challJoins: 0,
-    selected: false
+    selected: false,
+    open: true
   });
 
 
