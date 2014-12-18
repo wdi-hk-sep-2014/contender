@@ -21,8 +21,9 @@ Template.postContenders.events({
 
   'click .notifyChange': function(e) {
     e.preventDefault;
-    console.log("postId: " + post._id)
-    Meteor.call('createGroupNotification', post._id)
+    Meteor.call('createGroupNotification', post._id);
+    Router.go('postsList');
+    alert('Notified.')
   }
 });
 

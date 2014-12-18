@@ -3,8 +3,8 @@
 
   {{> postContenders}}
 
-  <div class="post">
-    <div class="post-content">
+  <div class="post row">
+    <div class="post-content col-md-6">
       <p><strong>{{activity}}</strong></p>
       <p><strong>{{description}}</strong></p>
       <p><strong>{{dateAndTime}}</strong></p>
@@ -23,6 +23,55 @@
 
 
     </div>
+    <div class="post-content col-md-6">
+      {{#if ownPost}}
+        {{#if openPost}}
+          <button class="btn btn-success" data-toggle="modal" data-target="#closeChallengeModal">Close Challenge</button>
+          <p>When the battle is over, close this challenge.</p>
+        {{else}}
+          <button class="btn btn-success" data-toggle="modal" data-target="#openChallengeModal">Re-open Challenge</button>
+          <p>The battle is never over.</p>
+        {{/if}}
+      {{/if}}
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade bs-example-modal-sm" id="closeChallengeModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Close Challenge</h4>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to close this challenge?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary no" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary closeChallenge">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade bs-example-modal-sm" id="openChallengeModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Re-open Challenge</h4>
+        </div>
+        <div class="modal-body">
+          Do you want to re-open this challenge?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary no" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary openChallenge">Yes</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -35,7 +84,7 @@
   {{#if currentUser}}
     {{> commentSubmit}}
   {{else}}
-    <p>Please log in to leave a comment.</p>
+    <p style="color: white">Please log in to leave a comment.</p>
   {{/if}}
 
 </template>

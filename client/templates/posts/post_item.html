@@ -1,16 +1,24 @@
 <template name="postItem">
   <div class="post">
     <div class="post-content">
-      <h3><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
+      <h3 id="postTitle"><a href="{{pathFor 'postPage'}}">{{title}}</a></h3>
 
-      <p><a href="{{pathFor route='postSpectators'}}"> {{specJoins}} Spectators,</a>
-      <a href="{{pathFor route='postChallengers'}}"> {{challJoins}} Challengers,</a>
+      <p>
+        <a href="{{pathFor route='postSpectators'}}"> {{specJoins}} Spectators,</a>
+        <a href="{{pathFor route='postChallengers'}}"> {{challJoins}} Challengers,</a>
+        <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments,</a>
+        submitted by <span id="authorMark">{{author}}</span>
+          {{#if ownPost}}
+          <a href="{{pathFor 'postEdit'}}" style="color: red">Edit Post</a>
+          {{/if}}
+      </p>
 
 
-      <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments,</a>
-      submitted by {{author}}
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" style="color: red">Edit</a>{{/if}}</p>
     </div>
-      <a href="{{pathFor 'postPage'}}"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Battle_icon_gladii.svg/120px-Battle_icon_gladii.svg.png" class="bite" width="30" height="30" border="0"></a>
+      {{#if openPost}}
+        <a href="{{pathFor 'postPage'}}" class="btn btn-success bite">Open</a>
+        {{else}}
+        <a href="{{pathFor 'postPage'}}" class="btn btn-danger bite">Closed</a>
+      {{/if}}
   </div>
 </template>

@@ -1,3 +1,10 @@
+
+
+span#authorMark {
+  font-weight: 800;
+
+}
+
 .grid-block, .main, .post, .comments li, .comment-form {
   background: #fff;
   -webkit-border-radius: 3px;
@@ -12,9 +19,10 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); }
 
 body {
-  background: #eee;
-  color: #666666; }
+  background-color: #3b3b3b;
+  background-image: url(http://www.transparenttextures.com/patterns/gplay.png); }
 
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 .navbar {
   margin-bottom: 10px; }
 /* line 32, ../sass/style.scss */
@@ -35,7 +43,11 @@ body {
   position: relative;
   opacity: 1; }
 
-
+#navbarBrand {
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 800;
+}
 
 .post:before, .post:after {
   content: "";
@@ -79,6 +91,13 @@ body {
   display: block;
   float: right;
   margin-top: 7px; }
+
+h3#postTitle {
+  font-weight: 800;
+}
+
+
+
 
 .comments {
   list-style-type: none;
@@ -164,8 +183,9 @@ body {
   pointer-events: auto;
 }
 
-
-
+p#matchup {
+  font-size: 40px;
+}
 
 
 

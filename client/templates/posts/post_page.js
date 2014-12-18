@@ -41,21 +41,35 @@ Template.postPage.helpers({
 
   ownPost: function() {
     return this.userId === Meteor.userId();
+  },
+
+  openPost: function() {
+    post = Posts.findOne({_id: this._id});
+    return post.open === true;
   }
 
 });
+
+
 
 Template.postPage.events({
   'click .upSpec': function(e) {
     e.preventDefault();
     Meteor.call('upSpec', this._id);
-  }
-});
-
-Template.postPage.events({
+  },
   'click .upChall': function(e) {
     e.preventDefault();
     Meteor.call('upChall', this._id);
+  },
+  'click .closeChallenge': function(e) {
+    e.preventDefault();
+    Meteor.call('closeChallenge', this._id);
+  },
+  'click .openChallenge': function(e) {
+    e.preventDefault();
+    Meteor.call('openChallenge', this._id);
   }
 });
+
+
 
